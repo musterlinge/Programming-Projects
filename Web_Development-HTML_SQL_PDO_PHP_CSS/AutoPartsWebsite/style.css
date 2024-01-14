@@ -1,0 +1,562 @@
+.top, .second, .image-subtext, .third, .fourth, .footer {
+    display: flex;
+    flex-direction: column;                 /* MAKES BOXES IN A COLUMN */
+}
+
+.header, .links, .main, .top-container, .images {
+    display: flex;
+}
+
+.third, .fourth, .fifth {
+    height:500px;
+}
+
+.second{
+    height:700px;
+}
+
+.top {
+    height: 300px;
+}
+
+.second, .fourth{
+    background-color: #183e47;
+}
+
+
+body{
+    margin: 0px;
+    background-color: #183e47;
+}
+
+ /*-------------------------------------------------HEADER----------------------------------------------------------*/
+
+ body {
+    margin: 0;
+    padding-top: 50px; /* Add padding to the top of the body to accommodate the fixed header */
+    font-family: 'Arial', sans-serif;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #183e47;
+    padding: 10px 15px; /* Adjust the padding to make the header smaller */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-menu {
+    margin-left: auto; /* Add this line to push the menu to the right */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #1064a0; /* Change this color to desired hover color */
+}
+
+/* Add a placeholder element to compensate for the fixed header */
+body::before {
+    content: "";
+    display: block;
+    height: 50px; /* Adjust this height to match the height of fixed header */
+}
+
+.logoImage{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+/*------------------------------------------------------SECOND----------------------------------------------------------*/
+
+.second-container {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #183e47;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+.second-header {
+    text-align: center;
+    font-size: 48px;
+}
+
+.second-subtext {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    margin: 0 auto;
+    color: wheat;
+}
+
+.dtimage {
+    width: 807px;
+    height: 325px;
+    gap: 10px;
+}
+/*---------------------------------------------------THIRD--------------------------------------------------------*/
+
+
+.third{
+    background-color: #909ea8;
+    align-items: center;
+    justify-content: center;
+}
+/*----------------------------------------------------FOURTH----------------------------------------------------*/
+  
+.fourth{
+    align-items: center;
+    justify-content: center;
+}
+
+.email-container{
+    background-color: rgb(31, 85, 103);
+    border: 12px solid;
+    justify-content: space-around;
+    border-radius: 40px;
+    width:  1100px;
+    height: 200px;
+    padding: 16px;
+    margin: 10px;
+    gap: 8px;
+    border-color: #f9bf4b;
+}
+
+.fourth-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 30px;
+    /*background-color: red;*/
+    
+}
+
+.fourth-container{
+    /*background-color: green;*/
+    width:500px;
+}
+
+.fourth-header, .fourth-subtext{
+    color:white;
+    margin-left: 150px;
+}
+
+.fourth-header{
+    font-size: 24px;
+    margin: 40px 0 0 0;
+    font-weight: bold;
+}
+
+.fourth-subtext{
+    font-size: 18px;
+    margin: 0 0 40px 0;
+}
+
+.fourth-button{
+    color: #F9FAF8;
+    background-color: #3882F6;
+    margin-left:800px;
+    border-radius: 10px;
+}
+
+/*----------------------------------------------------FIFTH----------------------------------------------------*/
+
+
+.fifth {
+    display: flex;
+    background-color: #909ea8;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center; /* Center items horizontally within the column */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1064a0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0d537d;
+}
+
+/*----------------------------------------------------FOOTER----------------------------------------------------*/
+
+.footer{
+    height: 100px;
+    background-color:  #181a1b;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text{
+    color:white;
+    font-size: 18px;
+}
+
+
+
+/*----------------------------------------------------signup container----------------------------------------------------*/
+
+
+.signup-container {
+    background-color: white; /* Sets the background color to white */
+    padding: 10px; /* Adds some padding inside the container */
+    border-radius: 10px; /* Optional: Rounds the corners of the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+    width: 25%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 0px auto; /* Centers the container with a margin on top and bottom */
+}
+
+/* Additional styles for form elements */
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-container label,
+.signup-container input {
+    width: 100%;
+    margin-bottom: 7px; /* Adds space between form elements */
+}
+
+.signup-container input[type="submit"] {
+    cursor: pointer; /* Changes cursor to pointer on hover over submit button */
+}
+
+
+
+/*----------------------------------------------------signup login----------------------------------------------------*/
+.signin-login {
+    background-color: white; /* Background color of the form for readability */
+    padding: 20px; /* You can reduce the top and bottom padding to reduce height */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow to the form */
+    text-align: center;
+    width: 300px; /* Set a fixed width for the form */
+    margin: auto; /* Center the form on the page */
+}
+
+.signin-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; /* Remove any default margin to reduce extra space */
+}
+
+.signin-login label,
+.signin-login input[type="email"],
+.signin-login input[type="password"],
+.signin-login input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px; /* You can reduce the margin-bottom to reduce space between form fields */
+}
+
+.signin-login input[type="submit"] {
+    cursor: pointer;
+    background-color: #4CAF50; /* Change button color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0; /* Ensure no additional space above the submit button */
+}
+
+/* Additional styles to control the spacing of the elements inside the form */
+.signin-login label {
+    margin-bottom: 5px; /* Reduced margin-bottom for labels */
+}
+
+.signin-login input[type="email"],
+.signin-login input[type="password"] {
+    margin-bottom: 15px; /* Adjust spacing between input fields */
+    padding: 8px; /* Adjust padding inside input fields */
+}
+
+.signin-login p {
+    margin-top: 15px; /* Adjust space above the paragraph */
+}
+
+/*------------------------------------------workstation drop-down------------------------------------------------------*/
+.workstationNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.workstationNav li {
+    float: left;
+}
+
+.workstationNav a, .workstationButton {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    .workstationNav a:hover, .workstationDrop:hover .workstationButton {
+        background-color: black;
+    }
+
+.workstationDrop li {
+    display: inline-block;
+}
+
+.workDropContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+ .workDropContent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+  }
+
+ .workDropContent a:hover {
+            background-color: #f1f1f1
+ }
+
+.workstationDrop:hover .workDropContent {
+    display: block;
+}
+
+/*------------------------------------------Product Page------------------------------------------------------*/
+
+.my_table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 55%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.my_table td th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.my_table tr:nth-child(even){background-color: #A0A0B2;}
+.my_table tr:nth-child(odd){background-color: #70707c;}
+.my_table tr:hover {background-color: #E2E2E7;}
+.my_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f9bf4b;
+    color: black;
+    text-align: center;
+}
+.same-size-images{
+    height: 300px;
+    width: 300px;
+}
+
+.buy-btn {
+    background-color: #f9bf4b;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+
+ /*----------------------------------------------------Cart Page----------------------------------------------------*/
+.add-to-cart-btn 
+{
+        background-color: #f9bf4b;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: flex-end;
+
+}
+
+.checkout-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart .product-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart th{
+    text-align: left;
+    padding: 5px 10px;
+    background-color: #14333a;
+    color:wheat;
+}
+
+.cart td {
+    padding: 10px 20px;
+}
+
+.cart td img{
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+}
+
+.cart td input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; /* Ensure the container takes the full width */
+}
+
+.cart-total table{
+    max-width: 500px;
+    border-top: 3px solid wheat;
+    color: wheat;
+    margin-left: auto; /* This will push the table to the right */
+}
+
+.cart .remove-btn {
+    background-color: #183e47;
+    font-size: 14px;
+    color:cornflowerblue;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+        
+
+}
+
+td:last-child{
+    text-align: right;
+    color: wheat;
+}
+
+th:last-child{
+    text-align: right;
+    color: wheat;
+}
+
+p {
+    color:wheat;
+}
+
+h2{
+    color:wheat;
+}
+
+
+/*----------------------------------------------------Checkout Page----------------------------------------------------*/
+#checkout-form .checkout-small-element {
+    display: inline-block;
+    width: 48%;
+    margin: 10px auto;
+}
+
+.form-control {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+}
+
+
+/*----------------------------------------------------cart button center ----------------------------------------------------*/
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .add-to-cart-btn {
+    margin-top: 10px; /* Adjust as needed */
+    /* ... existing styles ... */
+  }
+
+  /*----------------------------------------------------cart color tables ----------------------------------------------------*/
+  .wheat-color {
+    color: wheat;
+  }
+
+
+  /*----------------------------------------------------admin tables ----------------------------------------------------*/
+
+#order-table th:nth-child(6),
+#order-table td:nth-child(6) {
+  color: black;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <title>Dream Team Auto Parts Admin</title>
+  <script>
+    function validateLogin() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('pwd').value;
+  
+      if (username === 'admin' && password === 'admin') {
+        // Remove the alert message and directly redirect
+        window.location.href = 'admin.php'; // Redirect to admin.html
+        return false; // Prevent the form from submitting
+      } else {
+        alert('Incorrect username or password');
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo-container">
+        <img class="logoImage" src="images/logo.PNG" alt="Logo">
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.php">Products</a></li>
+            <li><a href="login.php">Sign in</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Login Form -->
+  <div class="signin-login">
+    <form onsubmit="return validateLogin()">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="password"><br><br>
+      <input type="submit" value="Sign In">
+    </form>
+  </div>
+
+  <!-- Original Content Hidden Until Logged In -->
+  <div class="workstationNav" style="display:none;">
+    <ul>
+      <li class="workstationDrop">
+        <a href="warehouse.html" class="workstationButton">Warehouse</a>
+        <div class="workDropContent">
+          <a href="#">Print Packing List</a>
+          <a href="#">Print Invoice</a>
+          <a href="#">Print Shipping Labels</a>
+          <a href="#">Update Order Status</a>
+        </div>
+      </li>
+      <li class="workstationDrop">
+        <a href="admin.php" class="workstationButton">Administration</a>
+          <div class="workDropContent">
+            <a href="admin.php">Sign In</a>
+          </div>
+      </li>
+      <li class="workstationDrop">
+        <a href="receiving.html" class="workstationButton">Receiving</a>
+        <div class="workDropContent">
+          <a href="viewInventory.html">View Inventory</a>
+          <a href="addInventory.html">Add Inventory</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>

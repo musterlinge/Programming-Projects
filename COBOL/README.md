@@ -6,10 +6,15 @@ The files I have included are the job outputs for these submissions. These were 
 COBOL_Input_and_Output_Files
 -------------------------------
 -This file takes in an unknown number of sales records for a specific fund and writes them to standard output in a specified format.
+
 -The first record provides details of the specific fund these sales relate to.
-	- This includes the fund name, the share price and the three commission percentages a broker can earn from a sale for this fund 
+
+	- This includes the fund name, the share price and the three commission percentages a broker can earn from a sale for this fund
+ 
 -The remaining records are sales for that specified fund.
+
 	- This includes the branch location, the name of the broker, the deposit amount for the sale, and a number 1-3 correlating to the commission 	    percent the broker will receive. 
+
 -For each sale, the program prints the branch location of the broker who initiated the sale, the name of the broker, the deposit amount for the sale, 	the calculated share amount(based on the deposit amount for the sale and the share price for the fund that was provided in the first record),
 	and the calculated commission(this is based on the commission percent assigned to the sale and the deposit amount for the sale).
 	Note: The share amount is printed with an extra zero at the end, based on the assignment specifications.

@@ -9,11 +9,11 @@ COBOL_Input_and_Output_Files
 
 * This file takes in an unknown number of sales records for a specific fund and writes them to standard output in a specified format.
 * The first record provides details of the specific fund these sales relate to.
-* This includes the fund name, the share price and the three commission percentages a broker can earn from a sale for this fund.
+	* This includes the fund name, the share price and the three commission percentages a broker can earn from a sale for this fund.
 * The remaining records are sales for that specified fund.
-* This includes the branch location, the name of the broker, the deposit amount for the sale, and a number 1-3 correlating to the commission percent the broker will receive. 
-* For each sale, the program prints the branch location of the broker who initiated the sale, the name of the broker, the deposit amount for the sale, the calculated share amount(based on the deposit amount for the sale and the share price for the fund that was provided in the first record),and the calculated commission(this is based on the commission percent assigned to the sale and the deposit amount for the sale).
-* Note: The share amount is printed with an extra zero at the end, based on the assignment specifications.
+	* This includes the branch location, the name of the broker, the deposit amount for the sale, and a number 1-3 correlating to the commission percent the broker will receive. 
+	* For each sale, the program prints the branch location of the broker who initiated the sale, the name of the broker, the deposit amount for the sale, the calculated share amount(based on the deposit amount for the sale and the share price for the fund that was provided in the first record),and the calculated commission(this is based on the commission percent assigned to the sale and the deposit amount for the sale).
+	* Note: The share amount is printed with an extra zero at the end, based on the assignment specifications.
 * If the broker sold more than 50,000 shares, the program adds the sale information to a highsale dataset.
 * After all sales have been read, the program outputs the total number of sales, total deposit amount (which is named "TOTAL SALES AMOUNT" based on the assignment requirements), the total shares sold, and the total commission the broker's earned.
 * Then the program reads the highsale dataset and prints the name of each broker that sold more than 50,000 shares and the number of shares sold.
@@ -28,7 +28,7 @@ COBOL_Tables_With_Assembler_SubProgram
 
 JOB STEPS:
 * JSTEP01 -
-This job step uses IBM's DFSORT utility to sort the funds dataset in ascending order by fund ID. 
+This job step uses IBM's DFSORT utility to sort the funds dataset in ascending order by the first three zone digits of the fund ID. 
 * JSTEP02 -
 This job compiles the SALESRPT COBOL program into an object module using the COBOL compiler IGYCRCTLY.
 * JSTEP03 -

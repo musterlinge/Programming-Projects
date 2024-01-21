@@ -1,0 +1,12 @@
+CXXFLAGS+=-Wall -Werror -std=c++11
+
+CC = g++
+
+wordscanner: wordscanner.o
+	$(CC) $(CFLAGS) -o wordscanner wordscanner.o
+
+wordscanner.o: wordscanner.cc
+	$(CC) $(CFLAGS) -c wordscanner.cc
+
+clean:
+	rm -f core *.o 

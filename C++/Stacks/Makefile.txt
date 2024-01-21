@@ -1,0 +1,12 @@
+CXXFLAGS+=-Wall -Werror -std=c++11
+
+CC = g++
+
+stack: main.o rational.o stack.h
+	$(CC) $(CFLAGS) -o stack main.o rational.o
+
+main.o: main.cc
+	$(CC) $(CFLAGS) -c main.cc
+
+clean:
+	rm -f core *.o 

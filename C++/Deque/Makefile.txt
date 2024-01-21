@@ -1,0 +1,12 @@
+CXXFLAGS+=-Wall -Werror -std=c++11
+
+CC = g++
+
+parking: parking.o parking.h
+	$(CC) $(CFLAGS) -o parking parking.o
+
+parking.o: parking.cc
+	$(CC) $(CFLAGS) -c parking.cc
+
+clean:
+	rm -f core *.o 

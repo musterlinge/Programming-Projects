@@ -1,0 +1,15 @@
+CXXFLAGS+=-Wall -Werror -std=c++11
+
+CC = g++
+
+simplegraph: graph.o simplegraph.o
+	$(CC) $(CFLAGS) -o simplegraph graph.o simplegraph.o
+
+graph.o: graph.cc
+	$(CC) $(CFLAGS) -c graph.cc
+
+simplegraph.o: simplegraph.cc
+	$(CC) $(CFLAGS) -c simplegraph.cc
+
+clean:
+	rm -f core *.o 

@@ -1,0 +1,15 @@
+CXXFLAGS+=-Wall -Werror -std=c++11
+
+CC = g++
+
+hash: htable.o hashmain.o entry.h
+	$(CC) $(CFLAGS) -o hash htable.o hashmain.o
+
+htable.o: htable.cc
+	$(CC) $(CFLAGS) -c htable.cc
+
+hashmain.o: hashmain.cc
+	$(CC) $(CFLAGS) -c hashmain.cc
+
+clean:
+	rm -f core *.o 

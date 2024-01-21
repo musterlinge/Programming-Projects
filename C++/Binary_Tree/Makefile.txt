@@ -1,0 +1,12 @@
+CXXFLAGS+=-Wall -Werror -std=c++11
+
+CC = g++
+
+binarytree: binarytree.o btree.h node.h
+	$(CC) $(CXXFLAGS) -o binarytree binarytree.o
+
+binary.o: binarytree.cc
+	$(CC) $(CXXFLAGS) -c binarytree.cc
+
+clean:
+	rm -f core *.o 
